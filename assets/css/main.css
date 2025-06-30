@@ -1373,98 +1373,6 @@ Start FunFacts CSS
   left: -10px;
 }
 
-.orbit-container {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-  animation: rotateOrbit 40s linear infinite;
-}
-
-.center-core {
-  position: absolute;
-  width: 70px;
-  height: 70px;
-  background: #a259ff;
-  color: white;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 70px;
-  font-weight: bold;
-  font-size: 16px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  box-shadow: 0 0 15px #a259ff;
-}
-
-.planet {
-  position: absolute;
-  width: 55px;
-  height: 55px;
-  background: #00d9ff;
-  color: black;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 55px;
-  font-weight: bold;
-  top: 50%;
-  left: 50%;
-  transform-origin: center center;
-  z-index: 1;
-}
-
-/* 360 / 10 = 36 degrees spacing */
-.planet1 {
-  transform: rotate(0deg) translate(110px) rotate(-0deg);
-}
-
-.planet2 {
-  transform: rotate(36deg) translate(110px) rotate(-36deg);
-}
-
-.planet3 {
-  transform: rotate(72deg) translate(110px) rotate(-72deg);
-}
-
-.planet4 {
-  transform: rotate(108deg) translate(110px) rotate(-108deg);
-}
-
-.planet5 {
-  transform: rotate(144deg) translate(110px) rotate(-144deg);
-}
-
-.planet6 {
-  transform: rotate(180deg) translate(110px) rotate(-180deg);
-}
-
-.planet7 {
-  transform: rotate(216deg) translate(110px) rotate(-216deg);
-}
-
-.planet8 {
-  transform: rotate(252deg) translate(110px) rotate(-252deg);
-}
-
-.planet9 {
-  transform: rotate(288deg) translate(110px) rotate(-288deg);
-}
-
-.planet10 {
-  transform: rotate(324deg) translate(110px) rotate(-324deg);
-}
-
-@keyframes rotateOrbit {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 
 
@@ -1655,4 +1563,103 @@ a:visited {
 .education-card:hover, .project-card:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px #00d9ff, 0 0 40px #00d9ff90;
+}
+
+
+/* Orbit container */
+.orbit-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 50px auto;
+  animation: spin 60s linear infinite;
+}
+
+/* Central core (Lekha) */
+.center-core {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70px;
+  height: 70px;
+  background: radial-gradient(circle, #00d9ff, #001c3f);
+  color: white;
+  border-radius: 50%;
+  line-height: 70px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 0 0 20px #00d9ff;
+  z-index: 10;
+}
+
+/* Common planet styles */
+.planet {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #00d9ff;
+  color: white;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 15px #00d9ffcc;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+}
+
+/* Symmetrical 10-planet orbit */
+.planet1 {
+  transform: rotate(0deg) translateX(150px) rotate(-0deg);
+}
+
+.planet2 {
+  transform: rotate(36deg) translateX(150px) rotate(-36deg);
+}
+
+.planet3 {
+  transform: rotate(72deg) translateX(150px) rotate(-72deg);
+}
+
+.planet4 {
+  transform: rotate(108deg) translateX(150px) rotate(-108deg);
+}
+
+.planet5 {
+  transform: rotate(144deg) translateX(150px) rotate(-144deg);
+}
+
+.planet6 {
+  transform: rotate(180deg) translateX(150px) rotate(-180deg);
+}
+
+.planet7 {
+  transform: rotate(216deg) translateX(150px) rotate(-216deg);
+}
+
+.planet8 {
+  transform: rotate(252deg) translateX(150px) rotate(-252deg);
+}
+
+.planet9 {
+  transform: rotate(288deg) translateX(150px) rotate(-288deg);
+}
+
+.planet10 {
+  transform: rotate(324deg) translateX(150px) rotate(-324deg);
+}
+
+/* Orbit animation */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
