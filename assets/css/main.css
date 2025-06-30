@@ -298,13 +298,13 @@ ol li {
 .section-title span {
   color: #ff0;
 }
-.btn {
+.btn, .banner_btn {
   font-size: 14px;
   padding: 10px 22px;
   border-radius: 0px;
   cursor: pointer;
   font-weight: 400;
-  color: #3e3e3e;
+  color: #181c2f !important;
   border-radius: 30px;
   text-transform: capitalize;
   -webkit-transition: all 0.2s linear;
@@ -317,7 +317,7 @@ ol li {
 .btn:active {
   box-shadow: none;
   outline: none;
-  color: #3e3e3e;
+  color: #181c2f !important;
 }
 .btn-common {
   font-size: 14px;
@@ -351,7 +351,8 @@ button:focus {
 .btn-secondary.banner_btn {
   background: #ff0;
   border-color: #ff0;
-  color: #3e3e3e;
+  color: #181c2f !important;
+  text-shadow: 0 1px 6px #fff, 0 0 2px #fff;
   text-transform: capitalize;
   margin-top: 30px;
   padding: 12px 32px;
@@ -1102,3 +1103,21 @@ Start FunFacts CSS
 /* ==========================================================================
 11. End Footer Area
 ========================================================================== */
+
+/* Make all main text brighter */
+.blog-info, .education-item, .internship-item, .services-content, p, li, h4 {
+  color: #fff !important;
+}
+
+.section-title, h2, h3, h4, h5, h6 {
+  color: #fff !important;
+}
+
+a, a:visited {
+  color: #fff !important;
+}
+
+/* Optionally, make sure background is dark enough for contrast */
+.dark_bg, .footer-area {
+  background-color: #181c2f !important;
+}
